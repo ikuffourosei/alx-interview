@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 """
-This module defines a function that generates Pascal's Triangle up to a given number of levels.
+This module defines a function that generates
+Pascal's Triangle up to a given number of levels.
 """
+
 
 def pascal_triangle(n):
     """
@@ -11,7 +13,8 @@ def pascal_triangle(n):
         n (int): The number of levels to generate in the triangle.
 
     Returns:
-        list: A list of lists, where each inner list represents a level in Pascal's Triangle.
+        list: A list of lists, where each 
+        inner list represents a level in Pascal's Triangle.
     """
     if n <= 0:
         return []
