@@ -4,8 +4,15 @@ from typing import List
 
 
 def validUTF8(data: List[int]) -> bool:
-    """a method that determines if a given data set
-    represents a valid UTF-8 encoding."""
+    """
+    Determines if a given data set represents a valid UTF-8 encoding.
+
+    Parameters:
+        data (List[int]): A list of integers representing bytes of data.
+
+    Returns:
+        bool: True if data is a valid UTF-8 encoding, else False.
+    """
     n_bytes = 0
     mask1 = 1 << 7
     mask2 = 1 << 6
