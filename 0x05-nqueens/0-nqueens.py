@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
-
+"""Nqueens"""
 import sys
 
 
 def print_usage_and_exit():
+    """Shows the use and exit with code 1"""
     print("Usage: nqueens N")
     sys.exit(1)
 
 
-def is_integer(s):
+def is_integer(s) -> bool:
+    """Checks if a given parameter is an integer"""
     try:
         int(s)
         return True
@@ -17,7 +19,9 @@ def is_integer(s):
 
 
 def solve_n_queens(n):
+    """Solves the problem"""
     def is_safe(board, row, col):
+        """CHecks if a slot on the board is safe for the Queen"""
         for i in range(col):
             if board[row][i] == 1:
                 return False
@@ -34,7 +38,7 @@ def solve_n_queens(n):
 
     def solve_recursively(board, col):
         if col >= n:
-            solutions.append([[i, row.index(1)] for i, row in enumerate(board)])
+            res.append([[i, row.index(1)] for i, row in enumerate(board)])
             return
 
         for i in range(n):
@@ -43,10 +47,10 @@ def solve_n_queens(n):
                 solve_recursively(board, col + 1)
                 board[i][col] = 0
 
-    solutions = []
+    res = []
     board = [[0 for _ in range(n)] for _ in range(n)]
     solve_recursively(board, 0)
-    return solutions
+    return res
 
 
 def main():
