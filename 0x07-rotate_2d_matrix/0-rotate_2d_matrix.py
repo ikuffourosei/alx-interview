@@ -10,7 +10,7 @@ def rotate_2d_matrix(matrix):
     # n x n matrix
     row = len(matrix)
 
-    #find transpose
+    # find transpose
     for i in range(row):
         for j in range(i, row):
             matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
