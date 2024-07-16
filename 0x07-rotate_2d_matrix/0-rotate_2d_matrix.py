@@ -1,8 +1,5 @@
 #!/usr/bin/python3
 """Rotate 2D Matrix"""
-# ways to solve
-# convert given matrix to the transposed form
-# return the reversed form of the transposed matrix
 
 
 def rotate_2d_matrix(matrix):
