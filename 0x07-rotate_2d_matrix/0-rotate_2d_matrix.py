@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Rotate 2D Matrix"""
+"""Rotate 2D Matrix
+"""
 
 
 def rotate_2d_matrix(matrix):
@@ -11,5 +12,3 @@ def rotate_2d_matrix(matrix):
                 matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
         for i in range(row):
             matrix[i].reverse()
-    else:
-        return
