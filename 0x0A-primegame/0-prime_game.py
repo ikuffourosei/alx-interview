@@ -3,6 +3,10 @@
 
 
 def isWinner(x, nums):
+    """A function that determines the winner of a prime factor game
+    x: (int) - Number of rounds
+    nums: [list] - nums is an array of n
+    """
     if x <= 0 or not nums:
         return None
 
